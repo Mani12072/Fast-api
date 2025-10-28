@@ -24,6 +24,10 @@ example_data = [
     Emp_data(date="2025-10-23", id="EMP006", name="Meena Joshi", entry_time="09:00 AM", exit_time="05:45 PM")
 ]
 
+
+@app.get("/", summary="Home Page", description="Returns a welcome message for the API.")
+def home():
+    return {"message": "🚀 Welcome to FastAPI app!"}
 #get all
 @app.get("/log")
 def get_all():
